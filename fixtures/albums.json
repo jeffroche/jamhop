@@ -1,0 +1,336 @@
+{
+    "weeklyalbumchart": {
+        "album": [
+            {
+                "@attr": {
+                    "rank": "1"
+                }, 
+                "name": "WILDHEART", 
+                "artist": {
+                    "mbid": "f5c1f728-4bf0-48d6-aa2b-1d2e36e2cd56", 
+                    "#text": "Miguel"
+                }, 
+                "url": "http://www.last.fm/music/Miguel/WILDHEART", 
+                "mbid": "", 
+                "playcount": "151"
+            }, 
+            {
+                "@attr": {
+                    "rank": "2"
+                }, 
+                "name": "Summertime '06", 
+                "artist": {
+                    "mbid": "78e854b8-9713-4ff2-9218-6b3784893bff", 
+                    "#text": "Vince Staples"
+                }, 
+                "url": "http://www.last.fm/music/Vince+Staples/Summertime+%2706", 
+                "mbid": "", 
+                "playcount": "56"
+            }, 
+            {
+                "@attr": {
+                    "rank": "3"
+                }, 
+                "name": "DJ-Kicks (DJ Koze)", 
+                "artist": {
+                    "mbid": "dd4458c8-6728-4a44-980c-48107fa72bb8", 
+                    "#text": "DJ Koze"
+                }, 
+                "url": "http://www.last.fm/music/DJ+Koze/DJ-Kicks+(DJ+Koze)", 
+                "mbid": "", 
+                "playcount": "139"
+            }, 
+            {
+                "@attr": {
+                    "rank": "4"
+                }, 
+                "name": "Barter 6", 
+                "artist": {
+                    "mbid": "800760de-bdf8-43a2-8fe0-44a2401a5515", 
+                    "#text": "Young Thug"
+                }, 
+                "url": "http://www.last.fm/music/Young+Thug/Barter+6", 
+                "mbid": "", 
+                "playcount": "117"
+            }, 
+            {
+                "@attr": {
+                    "rank": "5"
+                }, 
+                "name": "The Suburbs", 
+                "artist": {
+                    "mbid": "52074ba6-e495-4ef3-9bb4-0703888a9f68", 
+                    "#text": "Arcade Fire"
+                }, 
+                "url": "http://www.last.fm/music/Arcade+Fire/The+Suburbs", 
+                "mbid": "2e77df9e-ddf3-4c8e-a9fe-305374aecf7b", 
+                "playcount": "172"
+            }, 
+            {
+                "@attr": {
+                    "rank": "6"
+                }, 
+                "name": "Amygdala", 
+                "artist": {
+                    "mbid": "dd4458c8-6728-4a44-980c-48107fa72bb8", 
+                    "#text": "DJ Koze"
+                }, 
+                "url": "http://www.last.fm/music/DJ+Koze/Amygdala", 
+                "mbid": "d59c9abd-b825-4aa7-b270-c86598ba73d0", 
+                "playcount": "117"
+            }, 
+            {
+                "@attr": {
+                    "rank": "7"
+                }, 
+                "name": "The Velvet Rope", 
+                "artist": {
+                    "mbid": "6be2828f-6c0d-4059-99d4-fa18acf1a296", 
+                    "#text": "Janet Jackson"
+                }, 
+                "url": "http://www.last.fm/music/Janet+Jackson/The+Velvet+Rope", 
+                "mbid": "5c0f94d0-6e7c-4547-bf52-eba96b14e3d3", 
+                "playcount": "33"
+            }, 
+            {
+                "@attr": {
+                    "rank": "8"
+                }, 
+                "name": "Black Hours", 
+                "artist": {
+                    "mbid": "6b82c839-ea15-4d3b-96f1-d1be924e9cb7", 
+                    "#text": "Hamilton Leithauser"
+                }, 
+                "url": "http://www.last.fm/music/Hamilton+Leithauser/Black+Hours", 
+                "mbid": "564c8917-c196-410a-a86d-091095d17fd6", 
+                "playcount": "220"
+            }, 
+            {
+                "@attr": {
+                    "rank": "9"
+                }, 
+                "name": "All for You", 
+                "artist": {
+                    "mbid": "6be2828f-6c0d-4059-99d4-fa18acf1a296", 
+                    "#text": "Janet Jackson"
+                }, 
+                "url": "http://www.last.fm/music/Janet+Jackson/All+for+You", 
+                "mbid": "252cc247-cdf2-446d-9d32-b89de808d0be", 
+                "playcount": "8"
+            }, 
+            {
+                "@attr": {
+                    "rank": "10"
+                }, 
+                "name": "The Epic", 
+                "artist": {
+                    "mbid": "", 
+                    "#text": "Kamasi Washington"
+                }, 
+                "url": "http://www.last.fm/music/Kamasi+Washington/The+Epic", 
+                "mbid": "", 
+                "playcount": "14"
+            }, 
+            {
+                "@attr": {
+                    "rank": "11"
+                }, 
+                "name": "No Sleeep", 
+                "artist": {
+                    "mbid": "6be2828f-6c0d-4059-99d4-fa18acf1a296", 
+                    "#text": "Janet Jackson"
+                }, 
+                "url": "http://www.last.fm/music/Janet+Jackson/No+Sleeep", 
+                "mbid": "", 
+                "playcount": "11"
+            }, 
+            {
+                "@attr": {
+                    "rank": "12"
+                }, 
+                "name": "In Colour", 
+                "artist": {
+                    "mbid": "d1515727-4a93-4c0d-88cb-d7a9fce01879", 
+                    "#text": "Jamie xx"
+                }, 
+                "url": "http://www.last.fm/music/Jamie+xx/In+Colour", 
+                "mbid": "", 
+                "playcount": "249"
+            }, 
+            {
+                "@attr": {
+                    "rank": "13"
+                }, 
+                "name": "The Beyond / Where the Giants Roam", 
+                "artist": {
+                    "mbid": "044fd265-79dd-43eb-afc4-8b20becf7e17", 
+                    "#text": "Thundercat"
+                }, 
+                "url": "http://www.last.fm/music/Thundercat/The+Beyond+%2F+Where+the+Giants+Roam", 
+                "mbid": "", 
+                "playcount": "51"
+            }, 
+            {
+                "@attr": {
+                    "rank": "14"
+                }, 
+                "name": "Lucy Pearl", 
+                "artist": {
+                    "mbid": "35e3200c-a82c-4357-910e-76b1a9cbaf05", 
+                    "#text": "Lucy Pearl"
+                }, 
+                "url": "http://www.last.fm/music/Lucy+Pearl/Lucy+Pearl", 
+                "mbid": "dd8b125f-aaf2-4938-b021-e144b302bbd5", 
+                "playcount": "37"
+            }, 
+            {
+                "@attr": {
+                    "rank": "15"
+                }, 
+                "name": "45:33", 
+                "artist": {
+                    "mbid": "2aaf7396-6ab8-40f3-9776-a41c42c8e26b", 
+                    "#text": "LCD Soundsystem"
+                }, 
+                "url": "http://www.last.fm/music/LCD+Soundsystem/45:33", 
+                "mbid": "52a6f83d-da94-431e-ba83-b60842204a80", 
+                "playcount": "34"
+            }, 
+            {
+                "@attr": {
+                    "rank": "16"
+                }, 
+                "name": "Can\u2019t Feel My Face", 
+                "artist": {
+                    "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9", 
+                    "#text": "The Weeknd"
+                }, 
+                "url": "http://www.last.fm/music/The+Weeknd/Can%E2%80%99t+Feel+My+Face", 
+                "mbid": "", 
+                "playcount": "2"
+            }, 
+            {
+                "@attr": {
+                    "rank": "17"
+                }, 
+                "name": "Nymphs II", 
+                "artist": {
+                    "mbid": "06e99a1b-4020-4380-ab27-1a3e0c5e557c", 
+                    "#text": "Nicolas Jaar"
+                }, 
+                "url": "http://www.last.fm/music/Nicolas+Jaar/Nymphs+II", 
+                "mbid": "", 
+                "playcount": "4"
+            }, 
+            {
+                "@attr": {
+                    "rank": "18"
+                }, 
+                "name": "Nymphs III", 
+                "artist": {
+                    "mbid": "06e99a1b-4020-4380-ab27-1a3e0c5e557c", 
+                    "#text": "Nicolas Jaar"
+                }, 
+                "url": "http://www.last.fm/music/Nicolas+Jaar/Nymphs+III", 
+                "mbid": "", 
+                "playcount": "2"
+            }, 
+            {
+                "@attr": {
+                    "rank": "19"
+                }, 
+                "name": "Best Of Number Ones", 
+                "artist": {
+                    "mbid": "6be2828f-6c0d-4059-99d4-fa18acf1a296", 
+                    "#text": "Janet Jackson"
+                }, 
+                "url": "http://www.last.fm/music/Janet+Jackson/Best+Of+Number+Ones", 
+                "mbid": "", 
+                "playcount": "13"
+            }, 
+            {
+                "@attr": {
+                    "rank": "20"
+                }, 
+                "name": "Still", 
+                "artist": {
+                    "mbid": "ecfeacaf-0399-470f-8207-d1c646569fd0", 
+                    "#text": "Richard Thompson"
+                }, 
+                "url": "http://www.last.fm/music/Richard+Thompson/Still", 
+                "mbid": "", 
+                "playcount": "2"
+            }, 
+            {
+                "@attr": {
+                    "rank": "21"
+                }, 
+                "name": "Station to Station", 
+                "artist": {
+                    "mbid": "5441c29d-3602-4898-b1a1-b77fa23b8e50", 
+                    "#text": "David Bowie"
+                }, 
+                "url": "http://www.last.fm/music/David+Bowie/Station+to+Station", 
+                "mbid": "6eea4e89-00c9-4d10-b192-17fcfd951956", 
+                "playcount": "17"
+            }, 
+            {
+                "@attr": {
+                    "rank": "22"
+                }, 
+                "name": "Extinction Level Event: The Final World Front", 
+                "artist": {
+                    "mbid": "10a9ff92-9637-4498-afea-7044b2ab0dc0", 
+                    "#text": "Busta Rhymes"
+                }, 
+                "url": "http://www.last.fm/music/Busta+Rhymes/Extinction+Level+Event:+The+Final+World+Front", 
+                "mbid": "b91f6478-a789-4213-a3cf-2e2819fe0fa9", 
+                "playcount": "1"
+            }, 
+            {
+                "@attr": {
+                    "rank": "23"
+                }, 
+                "name": "Norf Norf", 
+                "artist": {
+                    "mbid": "78e854b8-9713-4ff2-9218-6b3784893bff", 
+                    "#text": "Vince Staples"
+                }, 
+                "url": "http://www.last.fm/music/Vince+Staples/Norf+Norf", 
+                "mbid": "", 
+                "playcount": "1"
+            }, 
+            {
+                "@attr": {
+                    "rank": "24"
+                }, 
+                "name": "Get Paid", 
+                "artist": {
+                    "mbid": "78e854b8-9713-4ff2-9218-6b3784893bff", 
+                    "#text": "Vince Staples"
+                }, 
+                "url": "http://www.last.fm/music/Vince+Staples/Get+Paid", 
+                "mbid": "", 
+                "playcount": "1"
+            }, 
+            {
+                "@attr": {
+                    "rank": "25"
+                }, 
+                "name": "Love Is Lost", 
+                "artist": {
+                    "mbid": "5441c29d-3602-4898-b1a1-b77fa23b8e50", 
+                    "#text": "David Bowie"
+                }, 
+                "url": "http://www.last.fm/music/David+Bowie/Love+Is+Lost", 
+                "mbid": "ca102fdd-4888-4fe6-9470-cf2fce9f1a92", 
+                "playcount": "5"
+            }
+        ], 
+        "@attr": {
+            "to": "1436097600", 
+            "from": "1435492800", 
+            "user": "J_Roche"
+        }
+    }
+}

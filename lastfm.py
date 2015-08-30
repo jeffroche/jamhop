@@ -31,7 +31,7 @@ def top_albums(userid, target_date, charts=None):
     if 'weeklyalbumchart' not in r:
         return []
     results = []
-    for album in r['weeklyalbumchart']['album']:
+    for album in r['weeklyalbumchart']['album'][:10]:
         results.append({'artist': album['artist']['#text'],
                         'album': album['name']})
     return results

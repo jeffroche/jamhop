@@ -3,6 +3,7 @@ import json
 import mock
 import unittest
 
+from app import app
 import lastfm
 
 
@@ -40,7 +41,7 @@ class LastFMTestCase(unittest.TestCase):
         albums = lastfm.top_albums('J_Roche', dt.date(2015, 7, 1))
 
         mock_chart.assert_called_once_with('J_Roche')
-        self.assertEqual(len(albums), 25)
+        self.assertEqual(len(albums), 10)
 
     @mock.patch('lastfm.requests.get')
     @mock.patch('lastfm.chart_list')
@@ -51,7 +52,7 @@ class LastFMTestCase(unittest.TestCase):
         albums = lastfm.top_albums('J_Roche', dt.date(2015, 7, 1),
                                    charts=self.charts)
         mock_chart.assert_not_called()
-        self.assertEqual(len(albums), 25)
+        self.assertEqual(len(albums), 10)
 
     @mock.patch('lastfm.requests.get')
     def test_get_albums_out_of_range(self, mock_get):
@@ -61,6 +62,17 @@ class LastFMTestCase(unittest.TestCase):
         with self.assertRaises(lastfm.LastFMException):
             lastfm.top_albums('J_Roche', dt.date(2015, 9, 1),
                               charts=self.charts)
+
+
+class AppTestCase(unittest.TestCase):
+
+    def setUp(self):
+        app.config['TESTING'] = True
+        self.app = app.test_client()
+
+    def test_home(self):
+        rv = self.app.get('/')
+        assert 'Basic Page' in rv.data
 
 
 if __name__ == '__main__':

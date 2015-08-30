@@ -3,25 +3,37 @@ import json
 import mock
 import unittest
 
-from app import app
+import app as web_app
 import lastfm
+
+
+def load_fake_data():
+    with open('fixtures/chart.json', 'r') as f:
+        fake_chart_resp = json.loads(f.read())
+    with open('fixtures/albums.json', 'r') as f:
+        fake_albums_resp = json.loads(f.read())
+    charts = []
+    for chart in fake_chart_resp['weeklychartlist']['chart']:
+        charts.append({
+            'from': chart['from'],
+            'to': chart['to'],
+            'from_date': lastfm.timestamp_to_date(chart['from']),
+            'to_date': lastfm.timestamp_to_date(chart['to']),
+        })
+    return {
+        'fake_chart_resp': fake_chart_resp,
+        'fake_albums_resp': fake_albums_resp,
+        'charts': charts,
+    }
 
 
 class LastFMTestCase(unittest.TestCase):
 
     def setUp(self):
-        with open('fixtures/chart.json', 'r') as f:
-            self.fake_chart_resp = json.loads(f.read())
-        with open('fixtures/albums.json', 'r') as f:
-            self.fake_albums_resp = json.loads(f.read())
-        self.charts = []
-        for chart in self.fake_chart_resp['weeklychartlist']['chart']:
-            self.charts.append({
-                'from': chart['from'],
-                'to': chart['to'],
-                'from_date': lastfm.timestamp_to_date(chart['from']),
-                'to_date': lastfm.timestamp_to_date(chart['to']),
-            })
+        data = load_fake_data()
+        self.fake_chart_resp = data['fake_chart_resp']
+        self.fake_albums_resp = data['fake_albums_resp']
+        self.charts = data['charts']
 
     @mock.patch('lastfm.requests.get')
     def test_get_charts(self, mock_get):
@@ -67,12 +79,46 @@ class LastFMTestCase(unittest.TestCase):
 class AppTestCase(unittest.TestCase):
 
     def setUp(self):
-        app.config['TESTING'] = True
-        self.app = app.test_client()
+        web_app.app.config['TESTING'] = True
+        self.app = web_app.app.test_client()
+        data = load_fake_data()
+        self.charts = data['charts']
 
     def test_home(self):
         rv = self.app.get('/')
         assert 'Basic Page' in rv.data
+
+    @mock.patch('lastfm.top_albums')
+    @mock.patch('lastfm.chart_list')
+    def test_snapshot(self, chart_list_mock, albums_mock):
+        chart_list_mock.return_value = self.charts
+        web_app.lastfm_snapshot('J_Roche')
+        self.assertEqual(albums_mock.call_count, 3)
+
+    @mock.patch('app.lastfm_snapshot')
+    def test_valid_user(self, snapshot_mock):
+        snapshot_mock.return_value = {
+            'six_months': [{'album': 'WILDHEART', 'artist': 'Miguel'}],
+            'one_year': [],
+            'two_year': [],
+        }
+        rv = self.app.get('/J_Roche/')
+        snapshot_mock.assert_called_with('J_Roche')
+        assert 'J_Roche' in rv.data
+        assert 'Miguel - WILDHEART' in rv.data
+
+    @mock.patch('app.lastfm_snapshot')
+    def test_invalid_user(self, snapshot_mock):
+        snapshot_mock.side_effect = lastfm.LastFMException("User not found")
+        rv = self.app.get('/J_Roche99/')
+        self.assertEqual(rv.status_code, 404)
+
+    @mock.patch('app.lastfm_snapshot')
+    def test_api_issue(self, snapshot_mock):
+        snapshot_mock.side_effect = lastfm.LastFMException("Some LastFM error")
+        rv = self.app.get('/J_Roche99/')
+        self.assertEqual(rv.status_code, 200)
+        assert 'error' in rv.data
 
 
 if __name__ == '__main__':

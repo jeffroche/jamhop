@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="twelve columns">
+        <h1>{{username}}</h1>
+    </div>
+</div>
+{% if not error %}
+<div class="row">
+    <div class="four columns">
+        <h2>6 Months Ago</h2>
+        <ol>
+        {% for album in charts.six_months %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+    <div class="four columns">
+        <h2>1 Year Ago</h2>
+        <ol>
+        {% for album in charts.one_year %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+    <div class="four columns">
+        <h2>2 Years Ago</h2>
+        <ol>
+        {% for album in charts.two_year %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
+{% else %}
+<div class="row">
+    <div class="twelve columns">
+        <p>{{error}}</p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

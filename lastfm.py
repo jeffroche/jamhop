@@ -27,6 +27,7 @@ def top_albums(userid, target_date, charts=None):
     resp = requests.get(url, params)
     r = resp.json()
     if 'error' in r:
+        print r['error']
         raise LastFMException(r['message'])
     if 'weeklyalbumchart' not in r:
         return []

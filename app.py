@@ -1,9 +1,19 @@
 import datetime as dt
 from flask import Flask, render_template, abort, request, redirect, url_for
 import lastfm
+import logging
 
 
 app = Flask(__name__)
+
+
+# Set up logging
+handler = logging.StreamHandler()
+log_fmt = logging.Formatter(
+    '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]')
+handler.setFormatter(log_fmt)
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.INFO)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -23,8 +33,10 @@ def user_page(username):
     except lastfm.LastFMException as e:
         charts = None
         error_message = str(e)
+        app.logger.error("%s - %s" % (username, error_message))
         if 'User not found' in error_message:
             return abort(404)
+    app.logger.info("Loaded data for %s" % username)
     return render_template('user.html', username=username, charts=charts,
                            error=error_message)
 
@@ -56,3 +68,4 @@ def lastfm_snapshot(username):
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.logger.setLevel(logging.DEBUG)

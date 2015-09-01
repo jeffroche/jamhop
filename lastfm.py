@@ -1,8 +1,11 @@
 import datetime
+import logging
 import os
 import requests
 import time
 
+
+logger = logging.getLogger(__name__)
 
 API_KEY = os.environ['LASTFM_KEY']
 
@@ -14,6 +17,9 @@ def top_albums(userid, target_date, charts=None):
         if c['from_date'] == target_date or (
                 target_date > c['from_date'] and target_date < c['to_date']):
             # Start date is either at the beginning or within the range
+            logger.debug("For target %s, s:%s e:%s" % (target_date,
+                                                       c['from_date'],
+                                                       c['to_date']))
             break
     else:
         raise LastFMException("No chart for that range")

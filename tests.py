@@ -93,7 +93,7 @@ class AppTestCase(unittest.TestCase):
     def test_snapshot(self, chart_list_mock, albums_mock):
         chart_list_mock.return_value = self.charts
         web_app.lastfm_snapshot('J_Roche')
-        self.assertEqual(albums_mock.call_count, 3)
+        self.assertEqual(albums_mock.call_count, 6)
 
     @mock.patch('app.lastfm_snapshot')
     def test_valid_user(self, snapshot_mock):

@@ -37,10 +37,19 @@ def lastfm_snapshot(username):
     one_year = lastfm.top_albums(username, one_year_ago, charts=charts)
     two_year_ago = dt.date.today() - dt.timedelta(days=2*365)
     two_year = lastfm.top_albums(username, two_year_ago, charts=charts)
+    three_year_ago = dt.date.today() - dt.timedelta(days=3*365)
+    three_year = lastfm.top_albums(username, three_year_ago, charts=charts)
+    four_year_ago = dt.date.today() - dt.timedelta(days=4*365)
+    four_year = lastfm.top_albums(username, four_year_ago, charts=charts)
+    five_year_ago = dt.date.today() - dt.timedelta(days=5*365)
+    five_year = lastfm.top_albums(username, five_year_ago, charts=charts)
     charts = {
         'six_months': six_months,
         'one_year': one_year,
         'two_year': two_year,
+        'three_year': three_year,
+        'four_year': four_year,
+        'five_year': five_year,
     }
     return charts
 

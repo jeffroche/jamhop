@@ -1,33 +1,61 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="row">
+<div class="row" style="margin-top: 10%">
     <div class="twelve columns">
-        <h1>{{username}}</h1>
+        <h1>LastFM/{{username}}</h1>
     </div>
 </div>
 {% if not error %}
 <div class="row">
-    <div class="four columns">
-        <h2>6 Months Ago</h2>
+    <div class="six columns">
+        <h4>6 Months Ago</h4>
         <ol>
         {% for album in charts.six_months %}
             <li>{{ album.artist }} - {{ album.album }}</li>
         {% endfor %}
         </ol>
     </div>
-    <div class="four columns">
-        <h2>1 Year Ago</h2>
+    <div class="six columns">
+        <h4>1 Year Ago</h4>
         <ol>
         {% for album in charts.one_year %}
             <li>{{ album.artist }} - {{ album.album }}</li>
         {% endfor %}
         </ol>
     </div>
-    <div class="four columns">
-        <h2>2 Years Ago</h2>
+</div>
+<div class="row">
+    <div class="six columns">
+        <h4>2 Years Ago</h4>
         <ol>
         {% for album in charts.two_year %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+    <div class="six columns">
+        <h4>3 Years Ago</h4>
+        <ol>
+        {% for album in charts.three_year %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="six columns">
+        <h4>4 Years Ago</h4>
+        <ol>
+        {% for album in charts.four_year %}
+            <li>{{ album.artist }} - {{ album.album }}</li>
+        {% endfor %}
+        </ol>
+    </div>
+    <div class="six columns">
+        <h4>5 Years Ago</h4>
+        <ol>
+        {% for album in charts.five_year %}
             <li>{{ album.artist }} - {{ album.album }}</li>
         {% endfor %}
         </ol>
@@ -40,4 +68,9 @@
     </div>
 </div>
 {% endif %}
+<div class="row" style="margin-top: 5%">
+    <div class="twelve columns">
+        <p>Built by <a href="http://www.jeffroche.me">Jeff Roche</a> using the <a href="http://www.last.fm/">LastFM</a> API, <a href="http://flask.pocoo.org/">Flask</a>, and <a href="http://www.getskeleton.com">Skeleton</a>.</p>
+    </div>
+</div>
 {% endblock %}
